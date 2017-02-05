@@ -19,7 +19,9 @@
     </facet>
     <facet type="hibernate" name="Hibernate">
       <configuration>
-        <datasource-map />
+        <datasource-map>
+          <unit-entry name="Gorm" />
+        </datasource-map>
         <naming-strategy-map />
       </configuration>
     </facet>
@@ -37,12 +39,15 @@
       <sourceFolder url="file://$MODULE_DIR$/../SchoolReport/grails-app/domain" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../SchoolReport/grails-app/services" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../SchoolReport/grails-app/taglib" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/../SchoolReport/target/classes" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="school-grailsPlugins" />
     <orderEntry type="module-library">
       <library name="Grails User Library (schoolReport-inplacePlugin)">
         <CLASSES>
+          <root url="file://$MODULE_DIR$/../SchoolReport/lib" />
           <root url="jar:///opt/grails-2.5.1/lib/org.grails/grails-datastore-simple/jars/grails-datastore-simple-3.1.5.RELEASE.jar!/" />
           <root url="jar:///opt/grails-2.5.1/lib/org.grails/grails-datastore-gorm/jars/grails-datastore-gorm-3.1.5.RELEASE.jar!/" />
           <root url="jar:///opt/grails-2.5.1/lib/org.grails/grails-datastore-core/jars/grails-datastore-core-3.1.5.RELEASE.jar!/" />
@@ -205,13 +210,56 @@
           <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-container-default/1.0-alpha-9-stable-1/plexus-container-default-1.0-alpha-9-stable-1.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/classworlds/classworlds/1.1-alpha-2/classworlds-1.1-alpha-2.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-ant-tasks/2.1.3/maven-ant-tasks-2.1.3.jar!/" />
-          <root url="file://$MODULE_DIR$/../SchoolReport/lib" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <SOURCES>
+          <root url="jar:///opt/grails-2.5.1/dist/grails-web-common-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-web-jsp-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-web-mvc-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-web-fileupload-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-databinding-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-web-databinding-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-web-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-plugin-datasource-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-plugin-rest-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-plugin-mimetypes-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/src/grails-datastore-simple-3.1.5.RELEASE-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/src/grails-datastore-gorm-3.1.5.RELEASE-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/src/grails-datastore-core-3.1.5.RELEASE-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-plugin-domain-class-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-plugin-converters-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-validation-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-plugin-url-mappings-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-plugin-servlets-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-plugin-services-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-plugin-log4j-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-web-gsp-taglib-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-encoder-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-plugin-codecs-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-logging-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-plugin-gsp-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-plugin-filters-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-plugin-i18n-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-spring-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-bootstrap-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-core-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-plugin-databinding-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-plugin-validation-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-async-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-plugin-controllers-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-web-url-mappings-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-web-sitemesh-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-web-gsp-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-resources-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-project-api-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-test-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-plugin-testing-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-docs-2.5.1-sources.jar!/" />
+          <root url="jar:///opt/grails-2.5.1/dist/grails-scripts-2.5.1-sources.jar!/" />
+        </SOURCES>
         <jarDirectory url="file://$MODULE_DIR$/../SchoolReport/lib" recursive="false" />
       </library>
     </orderEntry>
-    <orderEntry type="module" module-name="school-grailsPlugins" />
+    <orderEntry type="module" module-name="school" exported="" />
   </component>
 </module>
