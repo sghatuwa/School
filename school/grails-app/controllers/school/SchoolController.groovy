@@ -9,7 +9,12 @@ class SchoolController {
     def reportService;
 
     def index() {
-        def data = report()
+//        def data = report()
+//        render data as JSON
+        String serviceName = params.get("service")+"Service";
+        println "serviceName = $serviceName"
+        def service = applicationContext.getBean(serviceName);
+        def data = service.getData(params);
         render data as JSON
     }
 

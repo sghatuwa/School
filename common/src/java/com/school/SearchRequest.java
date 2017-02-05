@@ -7,20 +7,20 @@ import java.util.Map;
  */
 public class SearchRequest {
 
-    public Map<String, String> requestParameters;
+    public Map<String, Object> requestParameters;
 
     public boolean hasParameter(String param) {
-        return requestParameters.containsKey(param) && !requestParameters.get(param).isEmpty();
+        return requestParameters.containsKey(param) && requestParameters.get(param)!=null;
     }
 
-    public String  get(String param) {
+    public Object  get(String param) {
         return requestParameters.get(param);
     }
     public boolean hasParam(String param) {
-        return requestParameters.containsKey(param) && !requestParameters.get(param).isEmpty();
+        return requestParameters.containsKey(param) && requestParameters.get(param)!=null;
     }
 
-    public String  param(String param) {
+    public Object  param(String param) {
         return requestParameters.get(param);
     }
 
@@ -32,7 +32,7 @@ public class SearchRequest {
 
     public int paramAsInt(String key, int defaultValue){
         if (requestParameters.containsKey(key)){
-            return Integer.parseInt(requestParameters.get(key));
+            return Integer.parseInt(requestParameters.get(key).toString());
         }else
             return defaultValue;
     }
