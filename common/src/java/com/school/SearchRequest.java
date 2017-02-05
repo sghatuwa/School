@@ -26,7 +26,7 @@ public class SearchRequest {
 
     public void print(){
         for(Map.Entry entry : requestParameters.entrySet()){
-            System.out.print(entry.getKey() + "=>" + entry.getValue());
+            System.out.print(entry.getKey() + "=>" + entry.getValue().toString() +" : "+entry.getValue().getClass());
         }
     }
 
